@@ -56,5 +56,5 @@ output = twoNumberSumSolution3([-21, 301, 12, 4, 65, 56, 210, 356, 9, -47], 164)
 print(output)
 
 
-def twoNumberSumSolution4(array, targetSum):
-    pass
+# def twoNumberSumSolution4(array, targetSum):
+#     pass
