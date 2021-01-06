@@ -56,5 +56,17 @@ output = twoNumberSumSolution3([-21, 301, 12, 4, 65, 56, 210, 356, 9, -47], 164)
 print(output)
 
 
-# def twoNumberSumSolution4(array, targetSum):
-#     pass
+def twoNumberSumSolution4(array, targetSum):
+    dataStore = {}
+    for element in array:
+        potentialMatch = targetSum - element
+        if potentialMatch in dataStore:
+            return [potentialMatch, element]
+        else:
+            dataStore[element] = True
+    return []
+
+
+output = twoNumberSumSolution4([-21, 301, 12, 4, 65, 56, 210, 356, 9, -47], 164)
+print(output)
+
