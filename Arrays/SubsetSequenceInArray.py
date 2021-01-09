@@ -14,6 +14,8 @@ def isValidSubsequenceSolution1(array, sequence):
         arrayIndex+=1
     return arrayIndex == len(sequence)
 
+def isValidSubsequenceSolution1(array, sequence):
+    pass
 
 output = isValidSubsequenceSolution1([5, 1, 22, 25, 6, -1, 8, 10], [5, 1, 22, 25, 6, -1, 8, 10, 10])
 print(output)
