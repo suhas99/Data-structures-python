@@ -1,3 +1,4 @@
+O(n^3) Time complexity
 def threeNumberSumSolution1(array, targetSum):
     triplets = []
     array.sort()
@@ -9,7 +10,7 @@ def threeNumberSumSolution1(array, targetSum):
     # print(sorted(triplets, key=lambda triplets: (triplets[0],triplets[1],triplets[2])))
     return triplets
 
-
+O(n^2) Time complexity
 def threeNumberSumSolution2(array, targetSum):
     # orderd in ascending with non repetitive combinations
     triplets = []
@@ -29,11 +30,29 @@ def threeNumberSumSolution2(array, targetSum):
                 right -= 1
     return triplets
 
+import itertools
 
+
+def threeNumberSumSolution3(array, targetSum):
+    #un orderd and in itertools
+	flag=False
+	outputList=[]
+	if len(array)<1 or len(array)==1 or len(array)==2:
+		return []
+	for numbers in itertools.combinations(array,3):
+		if sum(numbers) ==targetSum:
+			flag=True
+			outputList.append([number for number in numbers])
+	if not flag:
+			return []
+	return outputList
 
 output1 = threeNumberSumSolution1([12, 3, 1, 2, -6, 5, -8, 6], 0)
 print(output1)
 
 output2 = threeNumberSumSolution2([12, 3, 1, 2, -6, 5, -8, 6], 0)
 print(output2)
+
+output3 = threeNumberSumSolution3([12, 3, 1, 2, -6, 5, -8, 6], 0)
+print(output3)
 
